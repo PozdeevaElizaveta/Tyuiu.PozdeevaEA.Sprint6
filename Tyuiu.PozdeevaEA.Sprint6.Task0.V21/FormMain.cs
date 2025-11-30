@@ -34,7 +34,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task0.V21
 
         private void buttonHelp_PEA_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Таск 0 выполнила студентка группы ИСПб-23-1 Поздеева Екатерина Александровна", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Таск 0 выполнила студентка группы ПКТб-25-1 Поздеева Елизавета Александровна", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void textBoxTask_PEA_TextChanged(object sender, EventArgs e)
