@@ -1,6 +1,4 @@
-﻿
-
-namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
+﻿namespace Tyuiu.PozdeevaEA.Sprint6.Task2.V21
 {
     partial class FormMain
     {
@@ -30,7 +28,6 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             groupBoxTask_PEA = new GroupBox();
             textBoxTask_PEA = new TextBox();
             pictureBoxFormula_PEA = new PictureBox();
@@ -42,12 +39,16 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             textBoxValuestart_PEA = new TextBox();
             textBoxValuestop_PEA = new TextBox();
             groupBoxResult_PEA = new GroupBox();
+            formsPlot_PEA = new ScottPlot.FormsPlot();
             labelResult_PEA = new Label();
-            textBoxResult_PEA = new TextBox();
+            dataGridView_PEA = new DataGridView();
+            X = new DataGridViewTextBoxColumn();
+            Y = new DataGridViewTextBoxColumn();
             groupBoxTask_PEA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxFormula_PEA).BeginInit();
             groupBoxValue_PEA.SuspendLayout();
             groupBoxResult_PEA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_PEA).BeginInit();
             SuspendLayout();
             // 
             // groupBoxTask_PEA
@@ -58,7 +59,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             groupBoxTask_PEA.Margin = new Padding(3, 4, 3, 4);
             groupBoxTask_PEA.Name = "groupBoxTask_PEA";
             groupBoxTask_PEA.Padding = new Padding(3, 4, 3, 4);
-            groupBoxTask_PEA.Size = new Size(484, 269);
+            groupBoxTask_PEA.Size = new Size(484, 190);
             groupBoxTask_PEA.TabIndex = 0;
             groupBoxTask_PEA.TabStop = false;
             groupBoxTask_PEA.Text = "Условие";
@@ -79,7 +80,6 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // 
             // pictureBoxFormula_PEA
             // 
-            pictureBoxFormula_PEA.Image = (Image)resources.GetObject("pictureBoxFormula_PEA.Image");
             pictureBoxFormula_PEA.Location = new Point(42, 93);
             pictureBoxFormula_PEA.Margin = new Padding(3, 4, 3, 4);
             pictureBoxFormula_PEA.Name = "pictureBoxFormula_PEA";
@@ -96,11 +96,11 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             groupBoxValue_PEA.Controls.Add(labelstop_PEA);
             groupBoxValue_PEA.Controls.Add(textBoxValuestart_PEA);
             groupBoxValue_PEA.Controls.Add(textBoxValuestop_PEA);
-            groupBoxValue_PEA.Location = new Point(12, 326);
+            groupBoxValue_PEA.Location = new Point(14, 233);
             groupBoxValue_PEA.Margin = new Padding(3, 4, 3, 4);
             groupBoxValue_PEA.Name = "groupBoxValue_PEA";
             groupBoxValue_PEA.Padding = new Padding(3, 4, 3, 4);
-            groupBoxValue_PEA.Size = new Size(486, 261);
+            groupBoxValue_PEA.Size = new Size(486, 242);
             groupBoxValue_PEA.TabIndex = 0;
             groupBoxValue_PEA.TabStop = false;
             groupBoxValue_PEA.Text = "Ввод данных";
@@ -113,7 +113,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             buttonDone_PEA.FlatAppearance.BorderColor = Color.MidnightBlue;
             buttonDone_PEA.FlatStyle = FlatStyle.Flat;
             buttonDone_PEA.ForeColor = SystemColors.ActiveCaptionText;
-            buttonDone_PEA.Location = new Point(274, 197);
+            buttonDone_PEA.Location = new Point(279, 158);
             buttonDone_PEA.Margin = new Padding(3, 4, 3, 4);
             buttonDone_PEA.Name = "buttonDone_PEA";
             buttonDone_PEA.Size = new Size(180, 35);
@@ -126,7 +126,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // 
             buttonHelp_PEA.FlatAppearance.BorderColor = Color.Silver;
             buttonHelp_PEA.FlatStyle = FlatStyle.Flat;
-            buttonHelp_PEA.Location = new Point(215, 197);
+            buttonHelp_PEA.Location = new Point(224, 158);
             buttonHelp_PEA.Margin = new Padding(3, 4, 3, 4);
             buttonHelp_PEA.Name = "buttonHelp_PEA";
             buttonHelp_PEA.Size = new Size(35, 35);
@@ -138,7 +138,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // labelstart_PEA
             // 
             labelstart_PEA.AutoSize = true;
-            labelstart_PEA.Location = new Point(23, 78);
+            labelstart_PEA.Location = new Point(23, 62);
             labelstart_PEA.Name = "labelstart_PEA";
             labelstart_PEA.Size = new Size(143, 20);
             labelstart_PEA.TabIndex = 4;
@@ -147,7 +147,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // labelstop_PEA
             // 
             labelstop_PEA.AutoSize = true;
-            labelstop_PEA.Location = new Point(259, 78);
+            labelstop_PEA.Location = new Point(259, 62);
             labelstop_PEA.Name = "labelstop_PEA";
             labelstop_PEA.Size = new Size(135, 20);
             labelstop_PEA.TabIndex = 4;
@@ -155,7 +155,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // 
             // textBoxValuestart_PEA
             // 
-            textBoxValuestart_PEA.Location = new Point(23, 126);
+            textBoxValuestart_PEA.Location = new Point(23, 101);
             textBoxValuestart_PEA.Margin = new Padding(3, 4, 3, 4);
             textBoxValuestart_PEA.Name = "textBoxValuestart_PEA";
             textBoxValuestart_PEA.Size = new Size(132, 27);
@@ -163,7 +163,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // 
             // textBoxValuestop_PEA
             // 
-            textBoxValuestop_PEA.Location = new Point(259, 126);
+            textBoxValuestop_PEA.Location = new Point(259, 101);
             textBoxValuestop_PEA.Margin = new Padding(3, 4, 3, 4);
             textBoxValuestop_PEA.Name = "textBoxValuestop_PEA";
             textBoxValuestop_PEA.Size = new Size(132, 27);
@@ -172,16 +172,26 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             // 
             // groupBoxResult_PEA
             // 
+            groupBoxResult_PEA.Controls.Add(dataGridView_PEA);
+            groupBoxResult_PEA.Controls.Add(formsPlot_PEA);
             groupBoxResult_PEA.Controls.Add(labelResult_PEA);
-            groupBoxResult_PEA.Controls.Add(textBoxResult_PEA);
             groupBoxResult_PEA.Location = new Point(521, 16);
             groupBoxResult_PEA.Margin = new Padding(3, 4, 3, 4);
             groupBoxResult_PEA.Name = "groupBoxResult_PEA";
             groupBoxResult_PEA.Padding = new Padding(3, 4, 3, 4);
-            groupBoxResult_PEA.Size = new Size(381, 571);
+            groupBoxResult_PEA.Size = new Size(807, 459);
             groupBoxResult_PEA.TabIndex = 0;
             groupBoxResult_PEA.TabStop = false;
             groupBoxResult_PEA.Text = "Вывод данных";
+            // 
+            // formsPlot_PEA
+            // 
+            formsPlot_PEA.Location = new Point(304, 40);
+            formsPlot_PEA.Margin = new Padding(5, 4, 5, 4);
+            formsPlot_PEA.Name = "formsPlot_PEA";
+            formsPlot_PEA.Size = new Size(495, 407);
+            formsPlot_PEA.TabIndex = 6;
+            formsPlot_PEA.Load += formsPlot_PEA_Load;
             // 
             // labelResult_PEA
             // 
@@ -192,24 +202,46 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             labelResult_PEA.TabIndex = 5;
             labelResult_PEA.Text = "Результат:";
             // 
-            // textBoxResult_PEA
+            // dataGridView_PEA
             // 
-            textBoxResult_PEA.Font = new Font("Consolas", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBoxResult_PEA.Location = new Point(35, 78);
-            textBoxResult_PEA.Margin = new Padding(3, 4, 3, 4);
-            textBoxResult_PEA.Multiline = true;
-            textBoxResult_PEA.Name = "textBoxResult_PEA";
-            textBoxResult_PEA.ReadOnly = true;
-            textBoxResult_PEA.ScrollBars = ScrollBars.Vertical;
-            textBoxResult_PEA.Size = new Size(315, 464);
-            textBoxResult_PEA.TabIndex = 3;
-            textBoxResult_PEA.TextChanged += textBoxResult_PEA_TextChanged;
+            dataGridView_PEA.AllowUserToDeleteRows = false;
+            dataGridView_PEA.BackgroundColor = SystemColors.Control;
+            dataGridView_PEA.CellBorderStyle = DataGridViewCellBorderStyle.Sunken;
+            dataGridView_PEA.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridView_PEA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_PEA.Columns.AddRange(new DataGridViewColumn[] { X, Y });
+            dataGridView_PEA.GridColor = SystemColors.GrayText;
+            dataGridView_PEA.ImeMode = ImeMode.NoControl;
+            dataGridView_PEA.Location = new Point(21, 75);
+            dataGridView_PEA.Name = "dataGridView_PEA";
+            dataGridView_PEA.ReadOnly = true;
+            dataGridView_PEA.RowHeadersVisible = false;
+            dataGridView_PEA.RowHeadersWidth = 51;
+            dataGridView_PEA.Size = new Size(259, 372);
+            dataGridView_PEA.TabIndex = 7;
+            dataGridView_PEA.CellContentClick += dataGridView_PEA_CellContentClick;
+            // 
+            // X
+            // 
+            X.HeaderText = "X";
+            X.MinimumWidth = 6;
+            X.Name = "X";
+            X.ReadOnly = true;
+            X.Width = 125;
+            // 
+            // Y
+            // 
+            Y.HeaderText = "Y";
+            Y.MinimumWidth = 6;
+            Y.Name = "Y";
+            Y.ReadOnly = true;
+            Y.Width = 125;
             // 
             // FormMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1340, 491);
             Controls.Add(groupBoxResult_PEA);
             Controls.Add(groupBoxValue_PEA);
             Controls.Add(groupBoxTask_PEA);
@@ -218,7 +250,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             MaximizeBox = false;
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Спринт 6 | Таск 1 | Вариант 14 | Поздеева Е.А.";
+            Text = "Спринт 6 | Таск 2 | Вариант 21 | Поздеева Е.А.";
             Load += FormMain_Load;
             groupBoxTask_PEA.ResumeLayout(false);
             groupBoxTask_PEA.PerformLayout();
@@ -227,6 +259,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
             groupBoxValue_PEA.PerformLayout();
             groupBoxResult_PEA.ResumeLayout(false);
             groupBoxResult_PEA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_PEA).EndInit();
             ResumeLayout(false);
         }
 
@@ -235,7 +268,6 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
         private GroupBox groupBoxTask_PEA;
         private GroupBox groupBoxValue_PEA;
         private GroupBox groupBoxResult_PEA;
-        private TextBox textBoxResult_PEA;
         private PictureBox pictureBoxFormula_PEA;
         private Button buttonDone_PEA;
         private TextBox textBoxValuestart_PEA;
@@ -245,8 +277,9 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
         private Label labelstop_PEA;
         private Label labelResult_PEA;
         private Button buttonHelp_PEA;
+        private ScottPlot.FormsPlot formsPlot_PEA;
+        private DataGridView dataGridView_PEA;
+        private DataGridViewTextBoxColumn X;
+        private DataGridViewTextBoxColumn Y;
     }
-
-        
-    }
-
+}

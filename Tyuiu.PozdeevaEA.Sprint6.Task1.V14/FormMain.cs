@@ -1,3 +1,4 @@
+using ScottPlot;
 using Tyuiu.PozdeevaEA.Sprint6.Task1.V14.Lib;
 namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
 {
@@ -62,6 +63,26 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task1.V14
         }
 
         private void groupBoxValue_PEA_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBoxTask_PEA_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxResult_PEA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxValuestop_PEA_TextChanged(object sender, EventArgs e)
         {
 
         }
