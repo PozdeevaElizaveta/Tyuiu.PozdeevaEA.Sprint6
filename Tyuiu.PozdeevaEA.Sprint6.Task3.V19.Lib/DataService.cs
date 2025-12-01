@@ -5,22 +5,26 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task3.V19.Lib
     {
         public int[,] Calculate(int[,] matrix)
         {
-            for (int i = 0; i < 4; i++)
+            // Копируем исходный массив
+            int[,] result = (int[,])matrix.Clone();
+
+            // Создаем массив значений 5-го столбца
+            int[] fifthColumn = new int[5];
+            for (int i = 0; i < 5; i++)
             {
-                for (int j = 0; j < 4 - i; j++)
-                {
-                    if (matrix[j, 4] > matrix[j + 1, 4])
-                    {
-                        for (int k = 0; k < 5; k++)
-                        {
-                            int temp = matrix[j, k];
-                            matrix[j, k] = matrix[j + 1, k];
-                            matrix[j + 1, k] = temp;
-                        }
-                    }
-                }
+                fifthColumn[i] = matrix[i, 4];
             }
-            return matrix;
+
+            // Сортируем значения 5-го столбца
+            Array.Sort(fifthColumn);
+
+            // Заменяем только 5-й столбец отсортированными значениями
+            for (int i = 0; i < 5; i++)
+            {
+                result[i, 4] = fifthColumn[i];
+            }
+
+            return result;
         }
     }
 }
