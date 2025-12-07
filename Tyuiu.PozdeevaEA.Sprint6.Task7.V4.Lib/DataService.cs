@@ -28,7 +28,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task7.V4.Lib
                 for (int c = 0; c < columns; c++)
                 {
                     
-                    if (matrix[1, c] % 4 == 0 && matrix[1, c] != 0)
+                    if (matrix[1, c] % 4 == 0)
                     {
                         matrix[1, c] = 4; 
                     }
