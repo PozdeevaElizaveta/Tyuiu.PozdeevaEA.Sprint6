@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using tyuiu.cources.programming.interfaces.Sprint6;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace Tyuiu.PozdeevaEA.Sprint6.Task5.V3.Lib
 {
     public class DataService : ISprint6Task5V3
@@ -30,7 +31,7 @@ namespace Tyuiu.PozdeevaEA.Sprint6.Task5.V3.Lib
             }
 
             numsArray = numsArray
-                .Where(val => Math.Abs(val) > 0.0001)
+                .Where(val => Math.Abs(val % 1) > 0.000001)
                 .Select(val => Math.Round(val, 3))
                 .ToArray();
 
